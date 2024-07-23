@@ -1,0 +1,412 @@
+#section1 {
+  background-color: #fcd8da;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#section1 .nav-menu {
+  font-family: var(--fontB);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 30px;
+  font-size: 2.5rem;
+}
+
+#section1 .nav-menu a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.circle {
+  fill: #ed412d;
+}
+
+.pentahedron {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: #3e82f7;
+}
+
+.rhombus {
+  fill: #2da94f;
+  stroke: #2da94f;
+}
+.x {
+  fill: #fdbd00;
+}
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+.bg svg {
+  display: block;
+  width: 360px;
+  height: 360px;
+  position: absolute;
+  transform: translateZ(0px);
+}
+#section1 .sun {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#section1 .sun svg {
+  width: 100%;
+}
+#section1 .sun .glass {
+  display: none;
+}
+#section1 .sun .noon {
+  animation: no 2s infinite ease;
+}
+
+@keyframes no {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+#section1 .main_img {
+  width: 150px;
+  height: 170px;
+  background-image: url("../img/me.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+  position: absolute;
+  top: 68%;
+  right: -1.7%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+#section1 .contact {
+  position: absolute;
+  right: 1vw;
+  top: 82%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 60px;
+  background-color: #ff99c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black200);
+  font-size: 20px;
+  font-weight: normal;
+  border-radius: 5px;
+  border: 3px solid var(--black);
+  font-family: "Erica One";
+  z-index: 20;
+}
+.main-img.shrink {
+  width: 200px;
+  height: 60px;
+  top: 82%;
+  left: auto;
+  right: 1vw;
+  transform: translateY(-50%);
+}
+.contact img {
+  display: none;
+}
+.contact.show img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#section1 .bar {
+  width: 100%;
+  height: 80px;
+  background-color: #37bff3;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+#section1 .title {
+  font-size: 10vw;
+  padding-bottom: 45vh;
+  font-family: var(--fontS);
+  text-transform: uppercase;
+  z-index: 1000;
+  color: #f1574f;
+  -webkit-text-stroke: 2px var(--white);
+}
+#section1 .sun {
+  width: 450px;
+  margin: 0 auto -30px;
+}
+#Layer_1 {
+  position: relative;
+  z-index: 1000;
+}
+#Layer_2 {
+  animation: rotation 4s infinite;
+}
+#Layer_3 {
+  animation: upDown 3s infinite;
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+#section2 {
+  background-color: #fcd8da;
+  width: 100%;
+  height: 70vh;
+  padding-top: 40px;
+}
+.scratch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.box canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3vw;
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
+  display: none;
+}
+#section2 > div {
+  font-size: 10vw;
+  line-height: 0.8;
+  /* background-color: #ccc; */
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-top: 1vw;
+  padding-left: 1vw;
+  justify-content: center;
+  text-align: center;
+}
+#section2 > div .box {
+  background-color: var(--blue);
+  background-image: url(../../assets/img/pattern.webp);
+  width: 400px;
+  height: 7.1vw;
+  margin: 0 10px;
+  display: inline-block;
+  border: 3px solid var(--black);
+  position: relative;
+  overflow: hidden;
+}
+
+#section2 .pink_flower {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+#section2 .blue_flower {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bar-pattern1 {
+  background-color: var(--blue);
+  background-image: url(../img/pattern.webp);
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  height: 27px;
+  margin-top: 10vh;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pink_flower_rotate {
+  animation: rotate 5s linear infinite;
+  transform-origin: 100px 100px; /* SVG의 중심 */
+}
+
+.blue_flower_scale {
+  animation: scale 3s ease-in-out infinite;
+}
+
+#section3 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fcd8da;
+  width: 100%;
+  height: 200vh;
+  padding-top: 40px;
+  align-items: center;
+}
+
+#section3 h1 {
+  font-family: var(--fontS);
+  text-align: center;
+  color: #766f78;
+  position: relative;
+  z-index: 1;
+  font-size: 6rem;
+  -webkit-text-stroke: 2px var(--white);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.img-container img {
+  margin-top: 3rem;
+  width: 450px;
+  height: 450px;
+  position: relative;
+  z-index: 1;
+}
+
+#section3 p {
+  font-family: var(--fontC);
+  text-align: center;
+  line-height: 2;
+  font-size: 22px;
+  margin-top: 20vh;
+  margin-bottom: 30vh;
+}
+
+.bar-pattern2 {
+  background-color: var(--blue);
+  background-image: url(../img/pattern.webp);
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  height: 27px; /* Match the height of the image */
+  width: 80vw; /* Match the width of the image */
+  position: absolute;
+  top: 80vh;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+#section3 .exhibition {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: -180px;
+  top: 10%; /* p 태그의 중간에 오도록 조정 */
+  transform: translateY(-50%);
+}
+
+#section3 .smile-pink {
+  margin-left: 3vw;
+  margin-bottom: 150px;
+  width: 35px;
+  height: auto;
+}
+
+.content-container {
+  display: flex;
+  position: relative;
+}
+
+.text-and-icons {
+  position: relative;
+  padding: 0 50px;
+}
+
+.coffee-icon {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  left: 50%; /* p 태그의 중앙에서 이동 */
+  top: 70vh; /* 적절히 조정하여 위치를 맞추세요 */
+  transform: translateX(-50%);
+}
+
+.photo {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  right: -150px; /* 적절히 조정하여 위치를 맞추세요 */
+  top: 50vh; /* p 태그의 중간에 오도록 조정 */
+  transform: translateY(-50%);
+}
