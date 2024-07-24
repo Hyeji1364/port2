@@ -149,22 +149,6 @@
   align-items: center;
 }
 
-#section1 .icon-text {
-  font-family: var(--fontB);
-  font-size: 2.8rem;
-  margin-left: 0.5vw;
-}
-
-#section1 .blue-bar .html_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .css_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
 #section1 .title {
   font-size: 10vw;
   padding-bottom: 45vh;
