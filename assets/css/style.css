@@ -134,7 +134,7 @@
   object-fit: cover;
 }
 
-#section1 .bar {
+#section1 .blue-bar {
   width: 100%;
   height: 80px;
   background-color: #37bff3;
@@ -144,6 +144,56 @@
   bottom: 0;
   border-top: 4px solid #000;
   border-bottom: 4px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+#section1 .icon-text {
+  font-family: var(--fontB);
+  font-size: 2.8rem;
+  margin-right: 1vw;
+}
+
+#section1 .blue-bar .html_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .css_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .js_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .react_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .vue_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .photoshop_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .ai_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
+}
+
+#section1 .blue-bar .figma_icon {
+  width: 50px; /* 원하는 아이콘 너비 */
+  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
 }
 
 #section1 .title {
@@ -223,7 +273,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 3vw;
+  font-size: 4.5vw;
   color: var(--white);
   font-weight: bold;
   text-align: center;
@@ -308,11 +358,12 @@
 }
 
 #section3 {
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #fcd8da;
   width: 100%;
-  height: 200vh;
+  height: 170vh;
   padding-top: 40px;
   align-items: center;
 }
@@ -362,7 +413,7 @@
   height: 27px; /* Match the height of the image */
   width: 80vw; /* Match the width of the image */
   position: absolute;
-  top: 80vh;
+  top: 115%;
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -398,7 +449,7 @@
   height: auto;
   position: absolute;
   left: 50%; /* p 태그의 중앙에서 이동 */
-  top: 70vh; /* 적절히 조정하여 위치를 맞추세요 */
+  top: 65vh; /* 적절히 조정하여 위치를 맞추세요 */
   transform: translateX(-50%);
 }
 
@@ -409,4 +460,16 @@
   right: -150px; /* 적절히 조정하여 위치를 맞추세요 */
   top: 50vh; /* p 태그의 중간에 오도록 조정 */
   transform: translateY(-50%);
+}
+
+#section3 .purple-bar {
+  width: 100%;
+  height: 80px;
+  background-color: var(--purple);
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
 }
