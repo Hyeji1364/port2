@@ -147,13 +147,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
 }
 
 #section1 .icon-text {
   font-family: var(--fontB);
   font-size: 2.8rem;
-  margin-right: 1vw;
+  margin-left: 0.5vw;
 }
 
 #section1 .blue-bar .html_icon {
@@ -162,36 +161,6 @@
 }
 
 #section1 .blue-bar .css_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .js_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .react_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .vue_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .photoshop_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .ai_icon {
-  width: 50px; /* 원하는 아이콘 너비 */
-  height: auto; /* 비율을 유지하면서 높이 자동 조정 */
-}
-
-#section1 .blue-bar .figma_icon {
   width: 50px; /* 원하는 아이콘 너비 */
   height: auto; /* 비율을 유지하면서 높이 자동 조정 */
 }
@@ -249,7 +218,7 @@
 #section2 {
   background-color: #fcd8da;
   width: 100%;
-  height: 70vh;
+  height: 100%;
   padding-top: 40px;
 }
 .scratch {
@@ -286,7 +255,6 @@
   /* background-color: #ccc; */
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
-  margin-bottom: 10px;
   padding-top: 1vw;
   padding-left: 1vw;
   justify-content: center;
@@ -363,19 +331,19 @@
   flex-direction: column;
   background-color: #fcd8da;
   width: 100%;
-  height: 170vh;
-  padding-top: 40px;
+  height: 100%;
   align-items: center;
 }
 
 #section3 h1 {
   font-family: var(--fontS);
   text-align: center;
-  color: #766f78;
+  color: #ed412d;
   position: relative;
   z-index: 1;
-  font-size: 6rem;
+  font-size: 6.5rem;
   -webkit-text-stroke: 2px var(--white);
+  margin-top: -6vh;
 }
 
 .img-container {
@@ -386,11 +354,11 @@
 }
 
 .img-container img {
-  margin-top: 3rem;
   width: 450px;
   height: 450px;
   position: relative;
   z-index: 1;
+  margin-top: 10vh;
 }
 
 #section3 p {
@@ -398,31 +366,15 @@
   text-align: center;
   line-height: 2;
   font-size: 22px;
-  margin-top: 20vh;
-  margin-bottom: 30vh;
-}
-
-.bar-pattern2 {
-  background-color: var(--blue);
-  background-image: url(../img/pattern.webp);
-  background-position: 50%;
-  background-repeat: repeat;
-  background-size: 100px 100px;
-  border: 3px solid #000;
-  border-radius: 6px;
-  height: 27px; /* Match the height of the image */
-  width: 80vw; /* Match the width of the image */
-  position: absolute;
-  top: 115%;
-  transform: translateY(-50%);
-  z-index: 0;
+  margin-top: 5vh;
+  margin-bottom: 45vh;
 }
 
 #section3 .exhibition {
   width: 200px;
   height: auto;
   position: absolute;
-  left: -180px;
+  left: -20%;
   top: 10%; /* p 태그의 중간에 오도록 조정 */
   transform: translateY(-50%);
 }
@@ -449,7 +401,7 @@
   height: auto;
   position: absolute;
   left: 50%; /* p 태그의 중앙에서 이동 */
-  top: 65vh; /* 적절히 조정하여 위치를 맞추세요 */
+  top: 60%; /* 적절히 조정하여 위치를 맞추세요 */
   transform: translateX(-50%);
 }
 
@@ -457,8 +409,8 @@
   width: 200px;
   height: auto;
   position: absolute;
-  right: -150px; /* 적절히 조정하여 위치를 맞추세요 */
-  top: 50vh; /* p 태그의 중간에 오도록 조정 */
+  right: -25%; /* 적절히 조정하여 위치를 맞추세요 */
+  top: 30vh; /* p 태그의 중간에 오도록 조정 */
   transform: translateY(-50%);
 }
 
@@ -472,4 +424,114 @@
   bottom: 0;
   border-top: 4px solid #000;
   border-bottom: 4px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #ff99c8;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}
+
+#section4 .bar-pattern2 {
+  background-color: var(--blue);
+  background-image: url(../img/pattern.webp);
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  border: 3px solid #000;
+  border-radius: 6px;
+  height: 27px; /* Match the height of the image */
+  width: 80vw; /* Match the width of the image */
+  position: absolute;
+  transform: translateY(-50%);
+  z-index: 0;
+  top: 3%;
+}
+
+#section4 .title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22vh;
+  position: relative;
+  top: 15vh; /* bar-pattern2의 높이 아래로 이동 */
+}
+
+#section4 .title4 {
+  font-family: var(--fontS);
+  text-align: center;
+  color: #a564a8;
+  position: relative;
+  z-index: 1;
+  font-size: 6.5rem;
+  -webkit-text-stroke: 2px var(--white);
+  margin-bottom: 70px;
+  position: relative;
+  top: 50px;
+  width: 100%;
+  padding: 10px;
+}
+
+#section4 .flower-icon {
+  width: 250px;
+  height: auto;
+  margin-top: 5%;
+}
+
+#section4 .flower-icon.left {
+  transform: scaleX(-1); /* 왼쪽 아이콘 수평 뒤집기 */
+}
+
+#section4 .flower-icon.right {
+  transform: scaleX(-1); /* 오른쪽 아이콘 원래대로 */
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* 각 스킬 항목 사이의 간격 */
+}
+
+#section4 .skills-container .skill-name {
+  color: var(--black);
+  font-family: var(--fontB);
+  font-size: 3rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.skill-item.reverse {
+  flex-direction: reverse;
+  text-align: right;
+}
+
+.skill-image {
+  margin-top: 5vh;
+  width: 764px;
+  height: 464px;
+  object-fit: cover; /* 이미지 비율 유지 */
+}
+
+.skill-description {
+  color: #3d3d3d;
+  margin-left: 3vw;
+  font-family: var(--fontC);
+  font-size: 1.2rem;
+  padding: 20px;
+  text-align: left;
+  flex: 1;
 }
