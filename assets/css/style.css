@@ -507,6 +507,21 @@
   font-size: 3rem;
 }
 
+#section4 .skills-container .skill-name-reverse {
+  color: var(--black);
+  font-family: var(--fontB);
+  font-size: 3rem;
+  text-align: right;
+}
+
+#section4 .skills-container .desc {
+  text-align-last: left;
+}
+
+#section4 .skills-container .desc-reverse {
+  text-align-last: right;
+}
+
 .skill-item {
   display: flex;
   align-items: center;
@@ -516,7 +531,6 @@
 
 .skill-item.reverse {
   flex-direction: reverse;
-  text-align: right;
 }
 
 .skill-image {
