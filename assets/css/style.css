@@ -679,7 +679,7 @@
 }
 
 .project-container {
-  padding-left: 1.3vw;
+  margin: 0;
   padding-right: 1.3vw;
 }
 
@@ -723,7 +723,16 @@
   color: var(--black500);
 }
 
-.pj-2 img {
+#section5 .pj-2 img {
   width: 536px;
   height: 543px;
+}
+
+#section5 .pj-2 h2 {
+  font-family: var(--fontS);
+  font-weight: 100;
+  font-size: 1.6rem;
+  color: #f1574f;
+  margin-top: 10px;
+  text-align: center;
 }
