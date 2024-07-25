@@ -213,7 +213,7 @@
   /* background-color: #ccc; */
   font-family: var(--fontB);
   text-transform: uppercase;
-  padding-left: 1vw;
+  padding-left: 1.3vw;
   position: relative;
 }
 #section2 > div .box1 {
@@ -250,7 +250,7 @@
   border-radius: 10px;
 }
 #section2 > div .box4 {
-  width: 22vw;
+  width: 21vw;
   height: 7.5vw;
   margin: 0 10px;
   display: inline-block;
@@ -279,7 +279,7 @@
 } */
 
 .bar-pattern1 {
-  width: 96%;
+  width: 97%;
   border: 0;
   margin-top: 6vh;
   margin-left: auto;
