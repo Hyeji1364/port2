@@ -34,7 +34,9 @@ class Ball {
   render() {
     $(this.shape).css({
       width: this.radius,
-      height: this.radius
+      height: this.radius,
+      position: "absolute",
+      willChange: "transform"
     });
     $("#section1 .bg").append(this.shape);
   }
@@ -53,6 +55,23 @@ class Ball {
       top: this.y,
       transform: "rotate(" + this.y + "deg)"
     });
+
+    // 입자가 화면 경계를 넘지 않도록 처리
+    if (this.x < 0) {
+      this.x = 0;
+      this.vx = -this.vx;
+    } else if (this.x > this.w - this.radius) {
+      this.x = this.w - this.radius;
+      this.vx = -this.vx;
+    }
+
+    if (this.y < 0) {
+      this.y = 0;
+      this.vy = -this.vy;
+    } else if (this.y > this.h - this.radius) {
+      this.y = this.h - this.radius;
+      this.vy = -this.vy;
+    }
 
     if (this.x < 0 || this.x > this.w - this.radius) {
       this.vx = -this.vx;
@@ -73,9 +92,7 @@ for (let i = 0; i < max; i++) {
 }
 
 function update() {
-  particles = particles.filter(function (p) {
-    return p.move();
-  });
-  requestAnimationFrame(update.bind(this));
+  particles = particles.filter((p) => p.move());
+  requestAnimationFrame(update);
 }
 update();
