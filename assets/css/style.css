@@ -101,9 +101,9 @@
   z-index: 10;
 }
 #section1 .contact {
-  position: absolute;
+  position: fixed;
   right: 1vw;
-  top: 75%;
+  top: 82vh;
   transform: translateY(-50%);
   width: 200px;
   height: 60px;
@@ -118,6 +118,27 @@
   border: 3px solid var(--black);
   font-family: "Erica One";
   z-index: 20;
+}
+
+/* 작은 화면 (예: 스마트폰) */
+@media (max-width: 600px) {
+  #section1 .contact {
+    top: 75vh; /* 작은 화면에서는 top을 더 위로 */
+  }
+}
+
+/* 중간 화면 (예: 태블릿) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  #section1 .contact {
+    top: 78vh; /* 중간 화면에서는 top을 약간 조정 */
+  }
+}
+
+/* 큰 화면 (예: 데스크탑) */
+@media (min-width: 1025px) {
+  #section1 .contact {
+    top: 85vh; /* 큰 화면에서는 기본 값 */
+  }
 }
 .main-img.shrink {
   width: 200px;
@@ -191,7 +212,7 @@
   background-color: #fcd8da;
   width: 100%;
   position: relative;
-  margin-top: -160px;
+  margin-top: -80px;
 }
 .bar {
   width: 100%;
@@ -228,7 +249,7 @@
 }
 
 #section2 > div .box1 {
-  width: 31.1vw;
+  width: 30.7vw;
   height: 7.5vw;
   margin: 0 10px;
   display: inline-block;
@@ -274,7 +295,7 @@
 .bar-pattern1 {
   width: calc(100% - 4.7vw);
   border: 0;
-  margin: 5% 0;
+  margin: 5% auto;
   background-color: var(--blue);
   background-image: url(../img/pattern.webp);
   background-position: 50%;
@@ -283,6 +304,7 @@
   border: 3px solid #000;
   border-radius: 6px;
   height: 27px;
+  display: block;
 }
 
 @keyframes rotate {
@@ -427,6 +449,16 @@
   text-align: center;
 }
 
+#section3 .bar {
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 1.2rem;
+  width: 80%;
+}
+
 #section3 .bar.sec2 {
   width: 100%;
   height: 80px;
@@ -439,6 +471,7 @@
   border-top: 4px solid #000;
   border-bottom: 4px solid #000;
   display: none;
+  color: var(--white);
 }
 
 #section3:before,
@@ -460,6 +493,8 @@
   transform: translateY(-50%);
   z-index: 0;
   top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #section3 .title-container {
@@ -468,7 +503,7 @@
   align-items: center;
   margin-bottom: 22vh;
   position: relative;
-  top: 10vh; /* bar-pattern2의 높이 아래로 이동 */
+  top: 12vh; /* bar-pattern2의 높이 아래로 이동 */
 }
 
 #section3 .title4 {
@@ -481,7 +516,6 @@
   -webkit-text-stroke: 2px var(--white);
   margin-bottom: 70px;
   position: relative;
-  top: 50px;
   width: 100%;
   padding: 10px;
 }
@@ -560,6 +594,7 @@
 #section3 .skillWrap .skill .left .img span {
   font-size: 100px;
   font-family: "gmarket";
+  font-weight: bold;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -577,6 +612,7 @@
   font-family: var(--fontB);
   text-transform: uppercase;
   font-size: 3.5rem;
+  text-align-last: left;
 }
 
 #section3 .skillWrap .skill .right p {
@@ -601,7 +637,7 @@
   flex-direction: column;
   background-color: #fcd8da;
   width: 100%;
-  height: 3000vh;
+  height: 100%;
   align-items: center;
 }
 
@@ -623,7 +659,7 @@
 #section4 p {
   font-family: var(--fontH);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 #section4 .run_chracter {
@@ -676,17 +712,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .pj-1,
-.pj-2,
 .pj-3,
 .pj-4,
-.pj-5,
 .pj-6,
-.pj-7,
 .pj-8 {
   margin: 10px;
   background-color: white;
@@ -696,26 +729,73 @@
   text-align: center;
 }
 
+.pj-2 {
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 55vw;
+  margin-top: -50vh;
+}
+
+.pj-4 {
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 5%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 50%;
+}
+
+.pj-5,
+.pj-7 {
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-left: 40vw;
+  margin-top: 10vh;
+}
+
 .pj-1 img {
   width: 805px;
   height: auto;
 }
 
+#section3 .bar-pattern1 {
+  background-color: var(--blue);
+  background-image: url(../img/pattern.webp);
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  border: 4px solid #000;
+  border-radius: 6px;
+  height: 27px; /* Match the height of the image */
+  width: 70%; /* Match the width of the image */
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
 #section4 .pj-1 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
 #section4 .pj-1 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
 
@@ -727,7 +807,7 @@
 #section4 .pj-2 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
@@ -738,7 +818,7 @@
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
 
@@ -750,23 +830,26 @@
 #section4 .pj-3 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
 #section4 .pj-3 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
 
+#section4 .blue_light-smile {
+  width: 150px;
+  height: auto;
+}
+
 #section4 .project2 {
-  display: flex;
   color: #f1574f;
   font-family: var(--fontB);
   width: 250px;
@@ -777,112 +860,128 @@
   align-items: center;
   font-size: 2rem;
   border-radius: 5px;
-  margin-top: 13%;
+  margin-top: 15%;
   margin-left: 45%;
-  margin-bottom: 5%;
 }
 
 #section4 .pj-4 img {
-  width: 1173px;
-  height: 635px;
+  width: 900px;
+  height: auto;
 }
 
 #section4 .pj-4 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
 #section4 .pj-4 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
+}
+
+#section4 .sticker_music {
+  width: 40px;
+  height: auto;
+  margin-left: 65vw;
+  margin-top: -80vh;
 }
 
 #section4 .pj-5 img {
   width: 787px;
-  height: 1179px;
+  height: auto;
 }
 
 #section4 .pj-5 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
+  text-align: center;
 }
 
 #section4 .pj-5 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
 
 #section4 .pj-6 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
 #section4 .pj-6 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
 
+/* #section4 .pj-7 {
+  margin: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+} */
+
 #section4 .pj-7 img {
   width: 787px;
-  height: 743px;
+  height: auto;
 }
 
 #section4 .pj-7 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
 #section4 .pj-7 p {
-  text-align-last: left;
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
+}
+
+#section4 .pj-8 img {
+  width: 787px;
+  height: auto;
 }
 
 #section4 .pj-8 h2 {
   font-family: var(--fontS);
   font-weight: 100;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f1574f;
   margin-top: 10px;
 }
 
-#section4 .pj-7 p {
-  text-align-last: left;
+#section4 .pj-8 p {
   margin-left: 2%;
   margin-top: 3%;
   margin-bottom: 1%;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--black500);
 }
