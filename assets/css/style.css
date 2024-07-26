@@ -249,7 +249,7 @@
 }
 
 #section2 > div .box1 {
-  width: 30.7vw;
+  width: 30.5vw;
   height: 7.5vw;
   margin: 0 10px;
   display: inline-block;
@@ -388,12 +388,6 @@
   border-radius: 30px;
 }
 
-#section2 .exhibition {
-  width: 200px;
-  height: auto;
-  margin-right: 20px;
-}
-
 #section2 .text-and-icons {
   display: flex;
   flex-direction: column; /* 수직정렬 */
@@ -416,7 +410,7 @@
   width: 200px;
   height: auto;
   margin-top: -23%;
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 #section2 .coffee-icon {
@@ -478,13 +472,10 @@
   border: 4px solid #000;
   border-radius: 6px;
   height: 27px; /* Match the height of the image */
-  width: 70%; /* Match the width of the image */
-  position: absolute;
-  transform: translateY(-50%);
-  z-index: 0;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%; /* Match the width of the image */
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 1vh;
 }
 
 #section3 .title-container {
@@ -493,7 +484,6 @@
   align-items: center;
   margin-bottom: 22vh;
   position: relative;
-  top: 12vh; /* bar-pattern2의 높이 아래로 이동 */
 }
 
 #section3 .title4 {
@@ -621,6 +611,21 @@
   z-index: 1000;
 }
 
+#section3 .bar-pattern3 {
+  background-color: var(--blue);
+  background-image: url(../img/pattern.webp);
+  background-position: 50%;
+  background-repeat: repeat;
+  background-size: 100px 100px;
+  border: 4px solid #000;
+  border-radius: 6px;
+  height: 27px; /* Match the height of the image */
+  width: 100%; /* Match the width of the image */
+  margin: 0 auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
 #section4 {
   position: relative;
   display: flex;
@@ -711,13 +716,20 @@
 }
 
 .project-container {
-  margin: 0;
-  padding-right: 1.3vw;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  width: 90%;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  min-width: 1200px;
   margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.project-container img {
+  width: 100%;
+  height: auto;
 }
 
 .pj-1,
@@ -780,21 +792,6 @@
   width: 100%;
   height: 100%;
   align-items: center;
-}
-
-#section3 .bar-pattern1 {
-  background-color: var(--blue);
-  background-image: url(../img/pattern.webp);
-  background-position: 50%;
-  background-repeat: repeat;
-  background-size: 100px 100px;
-  border: 4px solid #000;
-  border-radius: 6px;
-  height: 27px; /* Match the height of the image */
-  width: 70%; /* Match the width of the image */
-  margin: 0 auto;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
 }
 
 #section4 .pj-1 h2 {
