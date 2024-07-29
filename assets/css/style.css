@@ -102,6 +102,39 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+#section1 .contact-wrapper {
+  position: fixed;
+  right: 6vw;
+  bottom: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 20000;
+}
+
+#section1 .contact-img {
+  width: 150px; /* 필요한 크기로 조정 */
+  height: auto;
+  border: 10px solid var(--white);
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 60px; /* 버튼과의 간격 조정 */
+  z-index: 100;
+}
+
+#section1 .smile-pink {
+  width: 50px;
+  height: auto;
+  left: 3vw;
+  margin-bottom: 10px;
+  position: absolute;
+  bottom: 60px; /* 버튼과의 간격 조정 */
+  z-index: 100;
+}
+
+.blue_flower_scale {
+  animation: scale 3s ease-in-out infinite;
+}
 
 #section1 .contact {
   position: fixed;
@@ -121,13 +154,6 @@
   border: 3px solid var(--black);
   font-family: "Erica One";
   z-index: 20000;
-}
-
-#section1 .contact-icon {
-  width: 40px; /* Adjust the size as needed */
-  height: 40px; /* Adjust the size as needed */
-  position: absolute;
-  top: -50px; /* Adjust the position as needed */
 }
 
 /* 작은 화면 (예: 스마트폰) */
@@ -178,8 +204,8 @@
   -webkit-text-stroke: 2px var(--white);
 }
 #section1 .sun {
-  width: 450px;
-  margin: 0 auto -30px;
+  width: 500px;
+  margin: 0 auto -35px;
 }
 #Layer_1 {
   position: relative;
@@ -1014,7 +1040,7 @@
   height: auto;
   width: 700px;
   max-width: 100%;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) rotate(10deg);
   z-index: 3;
@@ -1025,14 +1051,14 @@
   height: auto;
   width: 700px;
   max-width: 100%;
-  top: 40%; /* Move it up */
+  top: 50%; /* Move it up */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%);
 }
 
 .blue-line {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 0%;
   width: 100%;
   height: 80px;
@@ -1062,7 +1088,7 @@
   flex-direction: column;
   background-color: #fcd8da;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   align-items: center;
 }
 
@@ -1094,7 +1120,7 @@
 .contact-item p {
   font-family: var(--fontB);
   margin: 30px;
-  font-size: 20px;
+  font-size: 30px;
   color: var(--black);
   margin-bottom: 20vh;
 }
@@ -1127,4 +1153,5 @@
   font-size: 16px;
   color: var(--black);
   text-align: center;
+  margin-bottom: 50px;
 }
