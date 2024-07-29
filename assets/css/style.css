@@ -102,6 +102,7 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+
 #section1 .contact {
   position: fixed;
   right: 1vw;
@@ -119,7 +120,14 @@
   border-radius: 5px;
   border: 3px solid var(--black);
   font-family: "Erica One";
-  z-index: 20;
+  z-index: 20000;
+}
+
+#section1 .contact-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  position: absolute;
+  top: -50px; /* Adjust the position as needed */
 }
 
 /* 작은 화면 (예: 스마트폰) */
@@ -243,7 +251,7 @@
   position: sticky;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   border-top: 4px solid #000;
   border-bottom: 4px solid #000;
 }
@@ -465,7 +473,7 @@
   position: sticky;
   left: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
   border-top: 4px solid #000;
   border-bottom: 4px solid #000;
   display: none;
@@ -750,9 +758,8 @@
 
 .pj-1,
 .pj-3,
-.pj-4,
-.pj-6,
-.pj-8 {
+.pj-5,
+.pj-7 {
   left: 0;
   background-color: white;
   border: 1px solid #ccc;
@@ -772,7 +779,9 @@
   margin-top: -50vh;
 }
 
-.pj-4 {
+.pj-4,
+.pj-6,
+.pj-8 {
   margin: 10px;
   background-color: white;
   border: 1px solid #ccc;
@@ -780,19 +789,7 @@
   margin-top: 5%;
   box-sizing: border-box;
   text-align: center;
-  margin-right: 50%;
-}
-
-.pj-5,
-.pj-7 {
-  margin: 10px;
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
-  margin-left: 40vw;
-  margin-top: 10vh;
+  margin-left: 50%;
 }
 
 .pj-1 img {
@@ -896,7 +893,7 @@
 }
 
 #section4 .pj-4 img {
-  width: 900px;
+  width: 100%;
   height: auto;
 }
 
@@ -938,8 +935,7 @@
   align-items: center;
   font-size: 2rem;
   border-radius: 5px;
-  margin-top: 15%;
-  margin-left: 45%;
+  margin-top: 10%;
 }
 
 #section4 .bar-pattern1 {
@@ -984,7 +980,151 @@
   align-items: center;
 }
 
-#section5 .sun {
-  width: 480px;
-  margin: 0 auto -30px;
+/* 태양 이미지를 담는 div 스타일 설정 */
+.sun2 {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  position: absolute;
+  top: 1vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4; /* Ensure sun is in front of the tickets */
+}
+
+.sun2::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 400px;
+  height: 100px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border-radius: 50%;
+  z-index: -1; /* Ensure the shadow is behind the sun */
+}
+
+.red-ticket {
+  position: absolute;
+  height: auto;
+  width: 700px;
+  max-width: 100%;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) rotate(10deg);
+  z-index: 3;
+}
+
+.pink-ticket {
+  position: absolute; /* Ensure it's positioned absolutely within the section */
+  height: auto;
+  width: 700px;
+  max-width: 100%;
+  top: 40%; /* Move it up */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+}
+
+.blue-line {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  height: 80px;
+  background-color: var(--blue);
+  border: 3px solid var(--black);
+  transform: rotate(5deg);
+  z-index: 1;
+}
+
+.purple-line {
+  position: absolute;
+  top: 70%;
+  left: 0%;
+  width: 100%;
+  height: 80px;
+  background-color: var(--purple);
+  border: 3px solid var(--black);
+  transform: rotate(-5deg);
+  z-index: 5;
+}
+
+/* section5 끝 */
+
+#section6 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fcd8da;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+}
+
+#section6 .contact-text {
+  position: absolute;
+  left: 50%;
+  font-family: var(--fontS);
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: var(--purple);
+  z-index: 6;
+  -webkit-text-stroke: 2px var(--white);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20vh;
+}
+
+.contact-item {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-item p {
+  font-family: var(--fontB);
+  margin: 30px;
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 20vh;
+}
+.icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  margin-bottom: 10px; /* Space between icon and text */
+}
+.icon-circle img {
+  width: 80px; /* Adjust the icon size as needed */
+  height: auto;
+}
+
+.contact-item img {
+  margin: 10px 0 0;
+  font-size: 18px;
+  color: var(--black);
+  width: 50%;
+  height: auto;
+}
+
+.footer-text {
+  font-family: var(--fontH);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--black);
+  text-align: center;
 }
