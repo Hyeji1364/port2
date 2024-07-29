@@ -1012,7 +1012,7 @@
   max-width: 480px;
   height: auto;
   position: absolute;
-  top: 1vh;
+  top: 15vh;
   left: 50%;
   transform: translateX(-50%);
   z-index: 4; /* Ensure sun is in front of the tickets */
